@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/jpg" href="images/favicon.jpg">
+    <title> Sunjid's Portfolio</title>
+    <title>Education</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url(illustration-anime-city.jpg)no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover, .active {
+            background: #ff4444;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .education {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+        }
+        .education h2 {
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+        .education p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        .progress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .progress-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#222 0%, #222 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        .progress-circle::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .progress-text {
+            position: absolute;
+            z-index: 2;
+        }
+        @keyframes fillAnimation {
+            from {
+                background: conic-gradient(#222 0%, #222 100%);
+            }
+            to {
+                background: conic-gradient(#ff4444 var(--percentage), #222 var(--percentage));
+            }
+        }
+        .progress-circle.animated {
+            animation: fillAnimation 2s ease-in-out forwards;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".progress-circle").forEach(circle => {
+                setTimeout(() => {
+                    circle.classList.add("animated");
+                }, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">My Education</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html" class="active">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <!-- School -->
+        <div class="education">
+            <h2>School</h2>
+            <p> Moharpara High School</p>
+            <div class="progress-container">
+                <div class="progress-circle" style="--percentage: 100%;">
+                    <span class="progress-text">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- College -->
+        <div class="education">
+            <h2>College</h2>
+            <p>Abdul Kadir Mollah City College</p>
+            <div class="progress-container">
+                <div class="progress-circle" style="--percentage: 100%;">
+                    <span class="progress-text">100%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- University -->
+        <div class="education">
+            <h2>University</h2>
+            <h2>Bachelor's Degree in Computer Science</h2>
+            <p>Daffodil International University</p>
+            <div class="progress-container">
+                <div class="progress-circle" style="--percentage: 50%;">
+                    <span class="progress-text">50%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

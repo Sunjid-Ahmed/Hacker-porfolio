@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="images/jpg" href="images/favicon.jpg">
+    <title> Sunjid's Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+    <style>
+        .menu-container {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            transition: background 0.3s;
+        }
+        .menu-container:hover {
+            background: #0056b3;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            min-width: 180px;
+        }
+        .menu-content a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .menu-content a:hover {
+            background: #007bff;
+            color: white;
+        }
+        .menu-container:focus-within .menu-content,
+        .menu-container:hover .menu-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container" tabindex="0">
+            <i class="fa-solid fa-bars"></i>
+            <div class="menu-content">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="skills.html">Skills</a>
+                <a href="education.html">Education</a>
+                <a href="experience.html">Experience</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        
+        <a href="index.html" class="logo">Sunjid Ahmed</a>
+        <nav>
+            <a href="index.html" class="active"> Home</a>
+            <a href="services.html">Services</a>
+            <a href="skills.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="home">
+        <div class="home-img">
+            <img src="me.png" alt="Profile Image">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Sunjid</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Here are the links of my social media profiles</p>
+            <div class="social-icons">
+                <a href="https://rb.gy/l1c7vu" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Sunjid-Ahmed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/SA_Sunjid" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sunjid.ahmed.6969" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/sm_sunjid/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://m.me/sunjid.ahmed.6969" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a href="https://t.me/Sunjid_ahmed" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <a href="mailto:sunjidahmed1992@gmail.com" class="btn">Hire me</a>
+        </div>
+    </section>
+</body> 
+</html>
